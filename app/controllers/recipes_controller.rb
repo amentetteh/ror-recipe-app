@@ -16,9 +16,10 @@ class RecipesController < ApplicationController
     redirect_to @recipe
   end
 
-  def destroy
-    @recipe = Recipe.find(params[:id])
-    @recipe.destroy
-    redirect_to root_path
+  def destroy_from_form
+    @food = Food.find(params[:food_id])
+    @food.destroy
+    redirect_to foods_path(current_user)
   end
+  
 end
