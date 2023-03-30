@@ -17,6 +17,7 @@
 !/log/.keep
 !/tmp/.keep
 
+temp_auto_push.bat
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
 !/tmp/pids/
@@ -36,3 +37,4 @@
 
 #ignore node
 node_modules/
+branch_structure.json
