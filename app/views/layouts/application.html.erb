@@ -11,7 +11,11 @@
   </head>
 
   <body class="<%= user_signed_in? ? '' : 'mainbg' %>">
-    <%= yield %>
+      <% if user_signed_in? %>
+      <div><%= render partial: "shared/menu" %></div>        
+      <div class="main"><%= yield %></div>         
+      <% end %>
+
   </body>
 </html>
  

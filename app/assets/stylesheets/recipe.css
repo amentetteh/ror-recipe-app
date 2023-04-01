@@ -1,8 +1,16 @@
 /* recipe */
+.recipe-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
 .recipe-container {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  width: 70%;
+  margin: auto;
 }
 
 .e-foods {
