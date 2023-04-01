@@ -1,4 +1,10 @@
 /* index */
+.mainbg {
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 table {
   border-collapse: collapse;
   border: 2px solid rgb(155, 147, 147);
@@ -30,6 +36,7 @@ tr:nth-child(odd) {
 }
 
 .button,
+.preview-btn,
 .delete-btn {
   border: none;
   color: white;
@@ -47,6 +54,12 @@ tr:nth-child(odd) {
   margin: 1px 0;
 }
 
+.preview-btn {
+  background-color: #5d596b;
+  padding: 0.2rem 1.1rem;
+  margin: 1px 0;
+}
+
 /* new food form */
 form {
   display: flex;
@@ -56,6 +69,14 @@ form {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+
+.log-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+  color: white;
 }
 
 h1 {
@@ -100,7 +121,42 @@ input[type="submit"]:hover {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-
+  width: 70%;
   /* border: 2px solid black; */
-  width: fit-content;
+  /* width: fit-content; */
+}
+
+.log-in form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 300px;
+  color: white;
+  background-color: #1a1a1a;
+}
+
+.log-in form .field {
+  width: 100%;
+}
+
+.log-in form .field input[type="password"],
+.log-in form .field input[type="email"],
+.log-in form .field input[type="text"],
+.log-in input[type="number"] {
+  width: 95%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.log-in-footer {
+  color: white;
+}
+
+.log-in-footer a {
+  text-decoration: none;
+  color: white;
+  pointer: cursor;
 }
