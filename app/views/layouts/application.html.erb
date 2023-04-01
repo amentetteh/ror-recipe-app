@@ -10,7 +10,11 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="<%= user_signed_in? ? '' : 'mainbg' %>">
+      <% if user_signed_in? %>
+      <div><%= render partial: "shared/menu" %></div>   
+      <% end %>
+      <div class="main"><%= yield %></div> 
   </body>
 </html>
+ 

@@ -1,6 +1,7 @@
-<section class="index-section">
-<div class="index-container">
-  <%= link_to 'New Food', new_food_path(), class: 'button' %>
+<%= stylesheet_link_tag "food", "data-turbo-track": "reload" %>
+<section class="food-section">
+<%= link_to 'New Food', new_food_path(), class: 'add-button button' %>
+<div class="food-container">
   <table>
   <thead>
     <tr>
