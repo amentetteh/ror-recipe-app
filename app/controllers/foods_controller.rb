@@ -1,4 +1,5 @@
 class FoodsController < ApplicationController
+  before_action :set_user, expect: [:update]
   def index
     @user = current_user
     @foods = @user.foods.includes(:user)
@@ -25,9 +26,11 @@ class FoodsController < ApplicationController
   def destroy
     @food = Food.find(params[:id])
     if @food.destroy
-      puts 'Food record deleted successfully.'
+      flash[:notice] = 'Food deleted successfully!'
+      redirect_to foods_path
     else
-      puts 'Error deleting food record.'
+      flash.now[:alert] = @food.errors.full_messages.first if @food.errors.any?
+      render :index, status: 400
     end
     redirect_to foods_path(current_user)
   end
@@ -36,5 +39,9 @@ class FoodsController < ApplicationController
 
   def food_params
     params.require(:food).permit(:name, :quantity, :price, :measurement_unit)
+  end
+
+  def set_user
+    @user = current_user
   end
 end
