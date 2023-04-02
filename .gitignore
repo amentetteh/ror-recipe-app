@@ -36,3 +36,8 @@
 
 #ignore node
 node_modules/
+
+/config/credentials/production.key
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
